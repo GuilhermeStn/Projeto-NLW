@@ -1,13 +1,13 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;                /* removemos as coonfigurações padrão do navegador */
+    padding: 0;              /* Preenchimento */
+    box-sizing: border-box;       
 }
 
 body{
     background-image: url(Assets/bg.jpg);
     background-position: top center;
-    background-size: 100% auto;
+    background-size: 100% auto;           /* a img vai ocupar todo o site */
     background-repeat: no-repeat;  /* para img não repetir */
     background-color: #121214;
 }
@@ -19,14 +19,14 @@ ul {
 }*/
 
 body * {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;        /* tudo dentro do body vai ficar cm essa fonte */
     line-height: 160%;
 }
 
 main{
-    max-width: 580px;
-    width: 90%;
-    margin: auto;
+    max-width: 580px;                  /* maior largura */
+    width: 90%;                   
+    margin: auto;             
 
     display: grid;
     gap: 24px;
@@ -41,7 +41,7 @@ section {
 
 }
 
-section div{
+section div{                      /* todas divs dentro de section */
     background-color: #2A2634;
     padding: 32px;
     padding-top: 24px;
@@ -65,7 +65,7 @@ ul {
     margin-top: 24px;
 }
 
-.Games-List img {
+.Games-List img {     /* maneira de acessar um elemento */
     width: 90px;
     border-radius: 8px;
 }
