@@ -23,13 +23,56 @@ body * {
     line-height: 160%;
 }
 
+header {
+    /*margin-top: 32px;  espaços */
+    /*text-align: center;  prodiedade de texto vai ser linhado no centro */
+    padding-top: 32px;
+    height: calc(120px + 32px);  
+}
+
+header img {
+    width: 120px;
+    border-radius: 50%;
+}
+/* pegr a div pra fazer a borda */
+
+header div{  /* não tem propiedade de texto */
+    width: 120px;
+    margin: auto; /* alinha assim no centro , quando,
+    não tem propiedades de texto.*/
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;  /* elemento do lado do outro */
+    padding: 4px;
+    transition: transform .3s;  /* faça/aplique a transição durante 3s */
+}
+
+header div:hover{ /* Ao passar o mouse , vai aplicar a propiedade */
+    transform: scale(1.1) /* escala do elemento 1.1 */
+}
+
+header div img{
+    width: 100%;
+}
+
 main{
     max-width: 580px;
     width: 90%;
-    margin: auto;
-
+    margin: 32px /* cima e baixo */  auto; 
     display: grid;
     gap: 24px;
+}
+
+/*main section{
+    text-align: center;
+}*/
+
+section div{
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+    border-top: 4px solid;
 }
 
 section {
@@ -39,14 +82,6 @@ section {
     border-radius: 10px;
     margin-top: 2px;
 
-}
-
-section div{
-    background-color: #2A2634;
-    padding: 32px;
-    padding-top: 24px;
-    border-radius: 8px;
-    border-top: 4px solid;
 }
 
 section h2 {
@@ -63,6 +98,11 @@ ul {
     flex-wrap: wrap;
     gap: 16px;
     margin-top: 24px;
+    transition: transform 3.s;
+}
+
+section ul il:hover{
+    transform:scale(1.1)
 }
 
 .Games-List img {
@@ -73,4 +113,54 @@ ul {
 .Streams-List img {
     border-radius: 50%;
     width: 70px;
+    border: 1px solid #443E54;  /*Borda nos streams */
 }
+
+/* animações */ 
+
+header div {
+    animation: fromtop .7s; /* Nome da animação ,e o tempo q ela vai durar */ 
+    animation-delay: 4s backwards; /* tempo q demora pra fazer a animação */
+}
+
+@keyframes fromtop{
+    from{       /* começa de -30 , e termina em 0 */
+        opacity: 0 ;   /* começa sem ver a ft */
+        transform: translateY(-30px)  
+    } /* partir */
+
+    to{
+        opacity: 1; 
+        transform: translateY(0) /* termina vendo a ft */
+    } /* terminar */
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+main section:nth-child(1){ /* main pega o section do filho numero 1 */ 
+    animation-delay: .2s backwards;
+    
+}
+main section:nth-child(2){
+    animation-delay: .4s;
+}
+main section:nth-child(3){
+    animation-delay: .8s;  /* a animação de delay vai demorar 8sgundos */
+}
+
+@keyframes fromBottom{
+    from{
+        opacity: 0; 
+        transform: translateX(-30px)
+    }
+
+    to{
+        opacity: 0; 
+        transform: translateY(0)
+    }
+}
+
+/*  
+ProPlayer
+*/
